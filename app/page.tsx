@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Page() {
   let photos = Array.from({ length: 6 }, (_, i) => i + 1);
@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <section className="cards-container">
       {photos.map((id) => (
-        <Link className="card" key={id} href={`/photos/${id}`} passHref>
-          {id}
+        <Link className="card" key={id} href={`/${id}`}>
+          home page rendered: {id}
         </Link>
       ))}
     </section>
